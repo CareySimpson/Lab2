@@ -37,11 +37,17 @@ class BinarySearchTree{
    
    
    
-   /*
-   pre-order traversal
+    /**
+   *	pre-order traversal
+   *	Lists the nodes in the binary search tree in preorder (Node, left, right)
    */
    public void preOrderTraversal(Node root){
       //implement me
+	   if(root == null) {return;}
+	   
+	   System.out.print(root.value + " ");
+	   preOrderTraversal(root.left);
+	   preOrderTraversal(root.right);
    }
 
    
