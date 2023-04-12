@@ -52,13 +52,18 @@ class BinarySearchTree{
 
    
    
-   /*
-   in-order traversal
-   */
+   /**
+    *	in-order traversal
+    *	Lists the nodes in the binary search tree in order (Left, node, right)
+    */
    public void inOrderTraversal(Node root){
       //implement me
-   }
-   
+	   if(root == null) {return;}
+	   
+	   preOrderTraversal(root.left);
+	   System.out.print(root.value + " ");
+	   preOrderTraversal(root.right);
+   }   
    
    
    /*
