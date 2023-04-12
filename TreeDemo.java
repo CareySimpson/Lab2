@@ -113,14 +113,16 @@ class BinarySearchTree{
    }  
   
   
-   /*
-   a method to find the node in the tree
-   with a largest key
+   /**
+   *	a method to find the node in the tree with a largest key
+   *	Takes the root node of a tree as argument
    */
    public int getMax(Node root){
+	   while(root.right != null)
+		   root = root.right;
+	   return root.value;
 	  //implement me
-   }
-   
+   }   
    
    
    /*
