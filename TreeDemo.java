@@ -80,15 +80,25 @@ class BinarySearchTree{
    }   
    
    
-   /*
-   a method to find the node in the tree
-   with a specific value
+   /**
+   *	a method to find the node in the tree with a specific value
+   *	Takes the arguments of the root of the tree and the key to find.
    */
    public boolean find(Node root, int key){
-	  //implement me
-      return false;           
-   }
-   
+	   
+	   if(root == null) {return false;}
+	   
+	   if(root.value == key) {return true;}
+	   
+	   if(root.value < key)
+	   {
+		  return find(root.right, key); 
+	   }
+	   else
+	   {
+		  return find(root.left, key); 
+	   }         
+   }   
    
    
    /*
