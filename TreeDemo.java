@@ -66,13 +66,18 @@ class BinarySearchTree{
    }   
    
    
-   /*
-   post-order traversal
-   */
+   /**
+    *	post-order traversal
+    *	Lists the nodes in the binary search tree in post-order (Left, right, node)
+    */
    public void postOrderTraversal(Node root){
       //implement me
-   }
-   
+	   if(root == null) {return;}
+	   
+	   preOrderTraversal(root.left);
+	   preOrderTraversal(root.right);
+	   System.out.print(root.value + " ");
+   }   
    
    
    /*
